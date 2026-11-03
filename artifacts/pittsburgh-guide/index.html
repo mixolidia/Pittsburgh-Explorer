@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4eddf">
+    <meta name="description" content="A small, personal field guide to Pittsburgh: its food, rivers, and local facts.">
+    <title>A Field Guide to Pittsburgh</title>
+    <link rel="icon" type="image/svg+xml" href="./images/ruffed-grouse.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="masthead">
+        <a class="wordmark" href="#top" aria-label="Pittsburgh field guide home">
+          <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>FIELD NOTES <b>/ PITTSBURGH</b></span>
+        </a>
+        <span class="edition">A LOCAL POCKET GUIDE <span>·</span> 01</span>
+      </header>
+
+      <main id="top">
+        <section class="intro" aria-labelledby="page-title">
+          <div class="intro-copy">
+            <p class="eyebrow"><span class="eyebrow-rule"></span> THREE RIVERS, ONE GOOD STORY</p>
+            <h1 id="page-title">Pittsburgh,<br><em>in good company.</em></h1>
+            <p class="intro-text">A few things worth knowing about the place where the rivers meet—and the fries go inside the sandwich.</p>
+          </div>
+          <div class="river-map" aria-label="Illustration of Pittsburgh's three rivers and bridges">
+            <svg viewBox="0 0 440 300" role="img" aria-labelledby="map-title">
+              <title id="map-title">Three river channels meet beneath a city bridge</title>
+              <path class="river" d="M0 205c63-7 100-18 147-14s77 14 112 13c58-1 106-24 181-23v119H0z"/>
+              <path class="river-light" d="M0 225c57-5 103-12 148-10 61 4 77 15 120 12 66-4 108-23 172-21"/>
+              <path class="river-light" d="M196 300c8-35 16-56 29-73 12-16 28-27 45-47"/>
+              <path class="bank" d="M0 195h68l26-28h21l23 17 34-2 26-28h30l24 23 27-9 24-27h29l23 20 22-7 23-29 20 1v86H0z"/>
+              <g class="buildings">
+                <path d="M54 162v-46h29v46zm7-36h6v8h-6zm12 0h6v8h-6zm-12 16h6v8h-6zm12 0h6v8h-6z"/>
+                <path d="M97 164v-61h38v61zm8-51h7v8h-7zm15 0h7v8h-7zm-15 17h7v8h-7zm15 0h7v8h-7zm-15 17h7v8h-7zm15 0h7v8h-7z"/>
+                <path d="M142 163v-38h29v38zm7-29h6v8h-6zm11 0h6v8h-6z"/>
+                <path d="M310 164v-52h33v52zm7-42h6v8h-6zm13 0h6v8h-6zm-13 17h6v8h-6zm13 0h6v8h-6z"/>
+                <path d="M351 163v-39h31v39zm8-29h6v8h-6zm12 0h6v8h-6z"/>
+              </g>
+              <g class="bridge">
+                <path d="M27 180h386M42 180v33m42-33v32m42-32v31m42-31v31m42-31v31m42-31v31m42-31v31m42-31v30m42-30v30"/>
+                <path d="M23 178q191-72 394 0M23 178v7m394-7v7M23 190h394"/>
+              </g>
+              <circle class="sun" cx="359" cy="53" r="23"/>
+              <path class="sun-line" d="M359 15v-9m0 94v-9m38-32h10m-96 0h10m65-27 7-7m-68 68 7-7m54 0 7 7m-68-68 7 7"/>
+              <text x="20" y="277">ALLEGHENY</text>
+              <text x="263" y="279">MONONGAHELA</text>
+            </svg>
+          </div>
+        </section>
+
+        <div class="section-divider"><span>THE QUICK READ</span><span class="divider-line"></span><span>40°26′ N / 80°00′ W</span></div>
+
+        <!-- Each panel covers one of the requested Pittsburgh facts or activities. -->
+        <section class="guide-grid" aria-label="Pittsburgh field guide">
+          <article class="panel food-panel">
+            <div class="panel-heading">
+              <span class="section-index">01 / FOOD</span>
+              <span class="little-stamp">PITTSBURGH<br>ON BREAD</span>
+            </div>
+            <h2>The sandwich<br>that needs a plan.</h2>
+            <p class="body-copy">Pittsburgh's famous Primanti Bros. sandwich stacks grilled meat, provolone, tomato, house slaw, and fries inside the bread—one-handed dining, if you’re feeling ambitious.</p>
+            <figure class="sandwich-art">
+              <img src="./images/primanti-sandwich.svg" alt="Illustration of a Pittsburgh-style sandwich piled with grilled meat, provolone, tomato, house slaw, and fries between thick slices of bread">
+              <figcaption>THE WHOLE LUNCH, BETWEEN TWO SLICES.</figcaption>
+            </figure>
+          </article>
+
+          <div class="right-stack">
+            <article class="panel facts-panel">
+              <div class="panel-heading">
+                <span class="section-index">02 / QUICK FACTS</span>
+                <span class="three-rivers" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <ul class="fact-list">
+                <li><span class="fact-label">NICKNAME</span><span class="fact-value">The Steel City</span></li>
+                <li><span class="fact-label">POPULATION</span><span class="fact-value">307,632 <small>people</small></span></li>
+                <li><span class="fact-label">PENNSYLVANIA STATEHOOD</span><span class="fact-value">1787</span></li>
+              </ul>
+              <p class="source-note">Population: U.S. Census Bureau estimate, July 1, 2025. <a href="https://www.census.gov/quickfacts/fact/table/pittsburghcitypennsylvania" target="_blank" rel="noreferrer">Census QuickFacts ↗</a></p>
+            </article>
+
+            <article class="panel leader-panel">
+              <div class="panel-heading"><span class="section-index">03 / LEADER</span><span class="star-mark" aria-hidden="true"></span></div>
+              <div class="leader-content">
+                <div class="leader-seal" aria-hidden="true">PGH<span></span></div>
+                <div>
+                  <h2>Corey O’Connor</h2>
+                  <p>Mayor of Pittsburgh</p>
+                  <a href="https://www.pittsburghpa.gov/City-Government/The-Mayor" target="_blank" rel="noreferrer">CITY HALL ↗</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <article class="panel bird-panel">
+            <div class="panel-heading">
+              <span class="section-index">04 / STATE BIRD</span>
+              <span class="interaction-note">GIVE IT A NUDGE <span aria-hidden="true">↘</span></span>
+            </div>
+            <div class="bird-layout">
+              <div class="bird-copy">
+                <h2>Ruffed grouse.</h2>
+                <p>Pennsylvania’s official state bird. A forest-floor regular with a fine set of feathers and a very theatrical courtship drum.</p>
+                <a href="https://www.pa.gov/agencies/pgc/wildlife/discover-pa-wildlife/ruffed-grouse" target="_blank" rel="noreferrer">MEET THE GROUSE ↗</a>
+              </div>
+              <button class="bird-button" type="button" aria-label="Make the ruffed grouse illustration shake">
+                <img class="bird" src="./images/ruffed-grouse.svg" alt="Illustration of a ruffed grouse standing on a branch, showing its fan-shaped tail and dark neck ruff">
+              </button>
+            </div>
+          </article>
+
+          <section class="panel likes-panel" aria-labelledby="likes-title">
+            <div class="likes-top">
+              <div>
+                <div class="panel-heading"><span class="section-index">05 / THINGS I LIKE</span></div>
+                <h2 id="likes-title">Your Pittsburgh, too.</h2>
+                <p class="body-copy">A corner, a view, a little ritual. Add the thing you’d tell a friend not to miss.</p>
+              </div>
+              <span class="note-number" aria-hidden="true">+</span>
+            </div>
+            <form class="like-form" id="like-form">
+              <label class="visually-hidden" for="like-input">Add something you like about Pittsburgh</label>
+              <input id="like-input" name="like" type="text" placeholder="Type a favorite…" autocomplete="off">
+              <button type="submit">Add <span aria-hidden="true">＋</span></button>
+            </form>
+            <ul class="likes-list" id="likes-list" aria-live="polite" aria-relevant="additions"></ul>
+            <p class="memory-note">JUST FOR THIS VISIT · NOT SAVED</p>
+          </section>
+        </section>
+
+        <footer class="page-footer">
+          <span>MADE FOR GETTING TO KNOW THE PLACE.</span>
+          <span class="footer-rivers">ALLEGHENY <i>·</i> MONONGAHELA <i>·</i> OHIO</span>
+        </footer>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

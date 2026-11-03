@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" role="img">
+  <title>Pittsburgh stacked sandwich illustration</title>
+  <ellipse cx="252" cy="258" rx="194" ry="18" fill="#d3c4aa"/>
+  <path d="M66 207c12-38 51-66 108-81 77-21 175-7 229 35 21 16 33 34 30 49-5 26-72 39-175 38-106-1-202-12-192-41z" fill="#c7773e" stroke="#914a2e" stroke-width="5"/>
+  <path d="M80 210c29-17 91-27 160-27 75 0 147 13 184 29-37 22-114 34-202 32-65-1-118-12-142-34z" fill="#f2cd82" stroke="#bd713b" stroke-width="4"/>
+  <path d="M101 199c22-22 40-21 59 1 16-26 42-30 59-3 20-25 43-24 61 1 21-23 45-17 58 3 21-16 42-8 52 7-39 15-90 21-151 21-59 0-106-8-138-30z" fill="#7d8e5e"/>
+  <path d="M98 190c24-18 56-22 89-20l-5 19c-27 1-56 5-76 15z" fill="#bd4933"/>
+  <path d="M187 170l85 3-11 43-79-5z" fill="#f0c958" stroke="#d7a53c" stroke-width="3"/>
+  <path d="M267 174c26-11 53-9 84 2l-12 30c-26-9-47-12-73-8z" fill="#b9462d"/>
+  <path d="M114 184l21-19 10 28-14 18zm36-11 22-18 5 35-15 13zm145 24 20-28 11 26-13 12zm40-3 18-25 15 28-15 9z" fill="#e9b14e" stroke="#c98638" stroke-width="2"/>
+  <path d="M83 155c18-42 73-68 151-70 78-1 157 22 187 58 14 17 12 29-5 38-44-20-104-30-179-30-63 0-117 8-158 25-13-4-8-13 4-21z" fill="#d78a4c" stroke="#914a2e" stroke-width="5"/>
+  <path d="M102 156c27-25 74-39 133-42 60-3 115 7 153 25" fill="none" stroke="#efbd77" stroke-width="6" stroke-linecap="round"/>
+  <g fill="#874a31" opacity=".7">
+    <ellipse cx="158" cy="115" rx="4" ry="2" transform="rotate(-22 158 115)"/>
+    <ellipse cx="214" cy="102" rx="4" ry="2" transform="rotate(10 214 102)"/>
+    <ellipse cx="270" cy="105" rx="4" ry="2" transform="rotate(-14 270 105)"/>
+    <ellipse cx="324" cy="116" rx="4" ry="2" transform="rotate(20 324 116)"/>
+  </g>
+  <path d="M75 236c-13 7-22 13-27 21m377-24c12 4 19 10 24 19" fill="none" stroke="#a55a36" stroke-width="3" stroke-linecap="round"/>
+</svg>

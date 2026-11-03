@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Pittsburgh, PA"
+description = "A friendly, phone-ready guide to Pittsburgh with its signature food, quick city facts, a state leader, a clickable state bird, and a personal list of favorite things."
+version = "1.0.0"
+id = "artifacts/pittsburgh-guide"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18163
+
+[services.development]
+run = "pnpm --filter @workspace/pittsburgh-guide run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pittsburgh-guide", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/pittsburgh-guide/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18163"
+BASE_PATH = "/"
