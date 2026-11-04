@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f4eddf">
     <meta name="description" content="A small, personal field guide to Pittsburgh: its food, rivers, and local facts.">
-    <title>A Field Guide to Pittsburgh</title>
+    <title>Pittsburgh — A Field Guide</title>
     <link rel="icon" type="image/svg+xml" href="./images/ruffed-grouse.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,24 @@
     <div class="page-shell">
       <header class="masthead">
         <a class="wordmark" href="#top" aria-label="Pittsburgh field guide home">
-          <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span>FIELD NOTES <b>/ PITTSBURGH</b></span>
+          <span class="wordmark-text">PITTSBURGH</span>
+          <span class="wordmark-state">PA</span>
         </a>
-        <span class="edition">A LOCAL POCKET GUIDE <span>·</span> 01</span>
+        <nav class="top-nav" aria-label="Page sections">
+          <a href="#food">Food</a>
+          <a href="#facts">Quick facts</a>
+          <a href="#leader">Leader</a>
+          <a href="#bird">State bird</a>
+          <a href="#likes">Your notes</a>
+        </nav>
       </header>
 
       <main id="top">
         <section class="intro" aria-labelledby="page-title">
           <div class="intro-copy">
-            <p class="eyebrow"><span class="eyebrow-rule"></span> THREE RIVERS, ONE GOOD STORY</p>
-            <h1 id="page-title">Pittsburgh,<br><em>in good company.</em></h1>
-            <p class="intro-text">A few things worth knowing about the place where the rivers meet—and the fries go inside the sandwich.</p>
+            <p class="eyebrow"><span class="eyebrow-rule"></span> A CITY CLOSE-UP <span class="eyebrow-dot">/</span> THREE RIVERS</p>
+            <h1 id="page-title">The fries go <em>inside.</em></h1>
+            <p class="intro-text">A field guide to Pittsburgh’s signature sandwich, city facts, and the people and birds that make this place.</p>
           </div>
           <div class="river-map" aria-label="Illustration of Pittsburgh's three rivers and bridges">
             <svg viewBox="0 0 440 300" role="img" aria-labelledby="map-title">
@@ -55,11 +61,11 @@
           </div>
         </section>
 
-        <div class="section-divider"><span>THE QUICK READ</span><span class="divider-line"></span><span>40°26′ N / 80°00′ W</span></div>
+        <div class="section-divider"><span>FIELD GUIDE / PITTSBURGH, PA</span><span class="divider-line"></span><span>40°26′ N / 80°00′ W</span></div>
 
         <!-- Each panel covers one of the requested Pittsburgh facts or activities. -->
         <section class="guide-grid" aria-label="Pittsburgh field guide">
-          <article class="panel food-panel">
+          <article class="panel food-panel" id="food">
             <div class="panel-heading">
               <span class="section-index">01 / FOOD</span>
               <span class="little-stamp">PITTSBURGH<br>ON BREAD</span>
@@ -73,7 +79,8 @@
           </article>
 
           <div class="right-stack">
-            <article class="panel facts-panel">
+            <h2 class="latest-heading"><span>THE LATEST</span><span class="latest-count">05 NOTES</span></h2>
+            <article class="panel facts-panel" id="facts">
               <div class="panel-heading">
                 <span class="section-index">02 / QUICK FACTS</span>
                 <span class="three-rivers" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -86,7 +93,7 @@
               <p class="source-note">Population: U.S. Census Bureau estimate, July 1, 2025. <a href="https://www.census.gov/quickfacts/fact/table/pittsburghcitypennsylvania" target="_blank" rel="noreferrer">Census QuickFacts ↗</a></p>
             </article>
 
-            <article class="panel leader-panel">
+            <article class="panel leader-panel" id="leader">
               <div class="panel-heading"><span class="section-index">03 / LEADER</span><span class="star-mark" aria-hidden="true"></span></div>
               <div class="leader-content">
                 <div class="leader-seal" aria-hidden="true">PGH<span></span></div>
@@ -99,7 +106,7 @@
             </article>
           </div>
 
-          <article class="panel bird-panel">
+          <article class="panel bird-panel" id="bird">
             <div class="panel-heading">
               <span class="section-index">04 / STATE BIRD</span>
               <span class="interaction-note">GIVE IT A NUDGE <span aria-hidden="true">↘</span></span>
@@ -116,7 +123,7 @@
             </div>
           </article>
 
-          <section class="panel likes-panel" aria-labelledby="likes-title">
+          <section class="panel likes-panel" id="likes" aria-labelledby="likes-title">
             <div class="likes-top">
               <div>
                 <div class="panel-heading"><span class="section-index">05 / THINGS I LIKE</span></div>
