@@ -1,0 +1,1 @@
+- [Gemini model access](gemini-model-access.md) — a configured API key may lack access to older model families; check current availability before blaming the key.

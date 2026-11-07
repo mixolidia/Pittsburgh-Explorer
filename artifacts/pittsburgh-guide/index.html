@@ -25,6 +25,7 @@
           <a href="#leader">Leader</a>
           <a href="#bird">State bird</a>
           <a href="#likes">Your notes</a>
+          <a href="#ask-a-local">Ask the guide</a>
         </nav>
       </header>
 
@@ -140,6 +141,67 @@
             <ul class="likes-list" id="likes-list" aria-live="polite" aria-relevant="additions"></ul>
             <p class="memory-note">JUST FOR THIS VISIT · NOT SAVED</p>
           </section>
+        </section>
+
+        <section class="guide-chat" id="ask-a-local" aria-labelledby="chat-title">
+          <div class="chat-intro">
+            <p class="eyebrow"><span class="eyebrow-rule"></span> 06 / ASK A LOCAL <span class="eyebrow-dot">/</span> FIELD NOTES</p>
+            <h2 id="chat-title">A good question<br>makes a good <em>day.</em></h2>
+            <p>Need a neighborhood nudge, a first-timer’s route, or a place to eat after the game? Ask the guide.</p>
+            <span class="chat-side-note">PITTSBURGH, IN YOUR POCKET</span>
+          </div>
+          <div class="chat-workspace">
+            <div class="chat-topline">
+              <span><i class="online-mark" aria-hidden="true"></i> THE CITY DESK</span>
+              <span class="chat-memory">THIS VISIT ONLY · NOT SAVED</span>
+            </div>
+            <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions text">
+              <div class="chat-empty" id="chat-empty">
+                <span class="empty-index">A NOTE FROM YOUR GUIDE</span>
+                <p>Start with what you’re into, how much time you have, or where you’re standing.</p>
+                <div class="suggestion-list" aria-label="Suggested questions">
+                  <button class="suggestion" type="button" data-question="I have one afternoon in Pittsburgh. What should I do?">I have one afternoon</button>
+                  <button class="suggestion" type="button" data-question="Where should I eat near downtown for a proper Pittsburgh lunch?">A proper Pittsburgh lunch</button>
+                  <button class="suggestion" type="button" data-question="What is the best way to see the three rivers and bridges?">See the rivers and bridges</button>
+                </div>
+              </div>
+            </div>
+            <p class="chat-status" id="chat-status" role="status" aria-live="polite"></p>
+            <form class="chat-form" id="chat-form">
+              <label class="visually-hidden" for="chat-input">Ask your Pittsburgh guide</label>
+              <textarea id="chat-input" name="message" rows="2" maxlength="2000" placeholder="Ask about a neighborhood, a bite, a view…" required></textarea>
+              <button class="chat-send" id="chat-submit" type="submit" disabled><span>Ask the guide</span><span aria-hidden="true">↗</span></button>
+            </form>
+            <details class="prompt-lab">
+              <summary><span>PROMPT LAB</span><span class="prompt-summary-note">THE GUIDE’S FIELD BRIEF</span></summary>
+              <div class="prompt-content">
+                <p class="prompt-caption">Exact system prompt · fetched from the city desk</p>
+                <pre id="system-prompt">Fetching the guide’s field brief…</pre>
+                <p class="prompt-error" id="prompt-error" hidden></p>
+                <button class="prompt-retry" id="prompt-retry" type="button" hidden>Try again</button>
+              </div>
+            </details>
+            <details class="settings-panel">
+              <summary><span>ANSWER SETTINGS</span><span class="prompt-summary-note">ADJUST THE FIELD NOTES</span></summary>
+              <div class="settings-grid">
+                <label class="setting-control" for="temperature">
+                  <span><span>Temperature</span><output id="temperature-value" for="temperature">1.00</output></span>
+                  <input id="temperature" type="range" min="0" max="2" step="0.05" value="1">
+                  <span class="range-ends"><span>Focused</span><span>Open-ended</span></span>
+                </label>
+                <label class="setting-control" for="top-p">
+                  <span><span>Top P</span><output id="top-p-value" for="top-p">0.95</output></span>
+                  <input id="top-p" type="range" min="0" max="1" step="0.01" value="0.95">
+                  <span class="range-ends"><span>Narrow</span><span>Wide</span></span>
+                </label>
+                <label class="setting-control" for="max-output-tokens">
+                  <span><span>Max output tokens</span><output id="max-output-tokens-value" for="max-output-tokens">300</output></span>
+                  <input id="max-output-tokens" type="range" min="32" max="1024" step="1" value="300">
+                  <span class="range-ends"><span>32</span><span>1,024</span></span>
+                </label>
+              </div>
+            </details>
+          </div>
         </section>
 
         <footer class="page-footer">

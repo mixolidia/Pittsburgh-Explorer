@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: chat
+    description: Pittsburgh city-guide chat
 paths:
   /healthz:
     get:
@@ -24,6 +26,54 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /chat/system-prompt:
+    get:
+      operationId: getChatSystemPrompt
+      tags: [chat]
+      summary: Get the city guide system prompt
+      responses:
+        "200":
+          description: The prompt used to guide city-guide answers
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChatSystemPrompt"
+  /chat:
+    post:
+      operationId: postChat
+      tags: [chat]
+      summary: Ask the Pittsburgh city guide a question
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CityChatInput"
+      responses:
+        "200":
+          description: The city guide response and generation details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CityChatResponse"
+        "400":
+          description: Invalid chat input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "502":
+          description: The Gemini service could not provide a response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "503":
+          description: Gemini is not configured
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +83,100 @@ components:
           type: string
       required:
         - status
+    ChatSystemPrompt:
+      type: object
+      properties:
+        systemPrompt:
+          type: string
+      required:
+        - systemPrompt
+    ChatSettings:
+      type: object
+      properties:
+        temperature:
+          type: number
+          minimum: 0
+          maximum: 2
+        topP:
+          type: number
+          minimum: 0
+          maximum: 1
+        maxOutputTokens:
+          type: integer
+          minimum: 32
+          maximum: 1024
+      required:
+        - temperature
+        - topP
+        - maxOutputTokens
+    CityChatMessage:
+      type: object
+      properties:
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+          maxLength: 4000
+      required:
+        - role
+        - content
+    CityChatInput:
+      type: object
+      properties:
+        message:
+          type: string
+          minLength: 1
+          maxLength: 4000
+        history:
+          type: array
+          maxItems: 12
+          items:
+            $ref: "#/components/schemas/CityChatMessage"
+        settings:
+          $ref: "#/components/schemas/ChatSettings"
+      required:
+        - message
+    ChatUsage:
+      type: object
+      properties:
+        promptTokenCount:
+          type: ["integer", "null"]
+        candidatesTokenCount:
+          type: ["integer", "null"]
+        totalTokenCount:
+          type: ["integer", "null"]
+        finishReason:
+          type: ["string", "null"]
+        truncated:
+          type: boolean
+      required:
+        - promptTokenCount
+        - candidatesTokenCount
+        - totalTokenCount
+        - finishReason
+        - truncated
+    CityChatResponse:
+      type: object
+      properties:
+        reply:
+          type: string
+        usage:
+          $ref: "#/components/schemas/ChatUsage"
+        settings:
+          $ref: "#/components/schemas/ChatSettings"
+        model:
+          type: string
+      required:
+        - reply
+        - usage
+        - settings
+        - model
+    ApiError:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
 
