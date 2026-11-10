@@ -1,6 +1,6 @@
-# [Project name]
+# Pittsburgh Explorer
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A community gallery for sharing the dishes and food traditions that make Pittsburgh home.
 
 ## Run & Operate
 
@@ -10,6 +10,8 @@ _Replace the heading above with the project's name, and this line with one sente
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
 - Required env: `DATABASE_URL` — Postgres connection string
+- Before the first API run, provision PostgreSQL and run the database push command to create the `dish_photos` table. Photos persist in PostgreSQL across server restarts.
+- The Pittsburgh Guide page lets visitors upload JPEG, PNG, and WebP dish photos and browse the newest community submissions.
 
 ## Stack
 
