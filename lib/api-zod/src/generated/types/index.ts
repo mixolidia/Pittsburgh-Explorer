@@ -14,4 +14,7 @@ export * from './cityChatInput';
 export * from './cityChatMessage';
 export * from './cityChatMessageRole';
 export * from './cityChatResponse';
+export * from './dishPhoto';
+export * from './dishPhotoInput';
+export * from './dishPhotoMimeType';
 export * from './healthStatus';

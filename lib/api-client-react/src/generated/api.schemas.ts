@@ -75,6 +75,41 @@ export interface CityChatResponse {
   model: string;
 }
 
+export interface DishPhotoInput {
+  /**
+     * @minLength 1
+     * @maxLength 120
+     */
+  title: string;
+  /** @maxLength 500 */
+  caption?: string;
+  /**
+     * A JPEG, PNG, or WebP data URL, no larger than 3 MB when decoded.
+     * @maxLength 4194327
+     */
+  image: string;
+}
+
+export type DishPhotoMimeType = typeof DishPhotoMimeType[keyof typeof DishPhotoMimeType];
+
+
+export const DishPhotoMimeType = {
+  'image/jpeg': 'image/jpeg',
+  'image/png': 'image/png',
+  'image/webp': 'image/webp',
+} as const;
+
+export interface DishPhoto {
+  id: number;
+  title: string;
+  caption: string;
+  mimeType: DishPhotoMimeType;
+  imageUrl: string;
+  /** @nullable */
+  inspectorNote: string | null;
+  createdAt: string;
+}
+
 export interface ApiError {
   error: string;
 }

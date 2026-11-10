@@ -25,6 +25,7 @@
           <a href="#leader">Leader</a>
           <a href="#bird">State bird</a>
           <a href="#likes">Your notes</a>
+          <a href="#dish-gallery">Photo roll</a>
           <a href="#ask-a-local">Ask the guide</a>
         </nav>
       </header>
@@ -141,6 +142,46 @@
             <ul class="likes-list" id="likes-list" aria-live="polite" aria-relevant="additions"></ul>
             <p class="memory-note">JUST FOR THIS VISIT · NOT SAVED</p>
           </section>
+        </section>
+
+        <section class="dish-gallery" id="dish-gallery" aria-labelledby="dish-gallery-title">
+          <div class="dish-gallery-heading">
+            <div>
+              <span class="section-index">07 / THE PITTSBURGH PLATE</span>
+              <h2 id="dish-gallery-title">Show us what’s <em>on your plate.</em></h2>
+              <p>Share your take on the sandwich that made fries a main course.</p>
+            </div>
+            <span class="gallery-stamp" aria-hidden="true">LOCAL<br>FAVORITE</span>
+          </div>
+
+          <div class="dish-gallery-content">
+            <form class="dish-upload-panel" id="dish-upload-form">
+              <p class="upload-kicker">ADD A PHOTO</p>
+              <label for="dish-title">Dish title</label>
+              <input id="dish-title" name="title" type="text" maxlength="120" placeholder="e.g. My first Primanti’s" required>
+              <label for="dish-caption">Caption <span>(optional)</span></label>
+              <textarea id="dish-caption" name="caption" rows="3" maxlength="500" placeholder="Where did you try it? What did you add?"></textarea>
+              <label class="dish-file-picker" for="dish-image">
+                <span>Choose a food photo</span>
+                <span class="dish-file-name" id="dish-file-name">JPEG, PNG, or WebP · up to 3 MB</span>
+                <input id="dish-image" name="image" type="file" accept="image/jpeg,image/png,image/webp" required>
+              </label>
+              <button class="dish-upload-button" id="dish-upload-button" type="submit">
+                <span>Share your plate</span><span aria-hidden="true">↗</span>
+              </button>
+              <p class="dish-upload-status" id="dish-upload-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="dish-gallery-wall">
+              <div class="gallery-topline">
+                <span>THE COMMUNITY PHOTO ROLL</span>
+                <span id="dish-gallery-count">LOADING</span>
+              </div>
+              <p class="dish-gallery-status" id="dish-gallery-status" role="status" aria-live="polite">Loading the photo roll…</p>
+              <p class="dish-gallery-empty" id="dish-gallery-empty" hidden>No photos yet. Add the first plate from your Pittsburgh visit.</p>
+              <div class="dish-gallery-grid" id="dish-gallery-grid" aria-live="polite" aria-relevant="additions"></div>
+            </div>
+          </div>
         </section>
 
         <section class="guide-chat" id="ask-a-local" aria-labelledby="chat-title">
